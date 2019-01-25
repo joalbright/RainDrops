@@ -12,7 +12,7 @@
 
 CGFloat padding = 100;
 CGFloat spacing = 30;
-CGFloat size = 50;
+CGFloat dropSize = 50;
 
 @interface RainDropsView ()
 
@@ -33,8 +33,16 @@ CGFloat size = 50;
 
         _drops = [@[] mutableCopy];
 
-        _rows = floor((frame.size.height - padding * 2) / (spacing + size));
-        _cols = floor((frame.size.width - padding * 2) / (spacing + size));
+        if (isPreview) {
+
+            padding = 20;
+            dropSize = 10;
+            spacing = 6;
+
+        }
+
+        _rows = floor((frame.size.height - padding * 2) / (spacing + dropSize));
+        _cols = floor((frame.size.width - padding * 2) / (spacing + dropSize));
 
         for (int c = 0; c < self.cols; c++) {
 
@@ -67,8 +75,8 @@ CGFloat size = 50;
     CGFloat xSpacing = (self.cols - 1) * spacing;
     CGFloat ySpacing = (self.rows - 1) * spacing;
 
-    CGFloat xSize = self.cols * size;
-    CGFloat ySize = self.rows * size;
+    CGFloat xSize = self.cols * dropSize;
+    CGFloat ySize = self.rows * dropSize;
 
     CGFloat xOffset = (rect.size.width - (xSpacing + xSize + padding * 2)) / 2;
     CGFloat yOffset = (rect.size.height - (ySpacing + ySize + padding * 2)) / 2;
@@ -77,14 +85,14 @@ CGFloat size = 50;
 
         for (int r = 0; r < self.rows; r++) {
 
-            CGFloat x = padding + c * (size + spacing) + xOffset;
-            CGFloat y = padding + r * (size + spacing) + yOffset;
+            CGFloat x = padding + c * (dropSize + spacing) + xOffset;
+            CGFloat y = padding + r * (dropSize + spacing) + yOffset;
 
             CGFloat a = ((NSNumber *)self.drops[c][r]).floatValue;
 
             [[NSColor colorWithWhite:1 alpha:a] set];
 
-            CGContextFillEllipseInRect(context, CGRectMake(x, y, size, size));
+            CGContextFillEllipseInRect(context, CGRectMake(x, y, dropSize, dropSize));
 
         }
 
