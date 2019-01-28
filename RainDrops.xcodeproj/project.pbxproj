@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E62518721FB47D500F448FA /* RainDropsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E62518621FB47D500F448FA /* RainDropsView.h */; };
 		0E62518921FB47D500F448FA /* RainDropsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E62518821FB47D500F448FA /* RainDropsView.m */; };
+		0E6251AD21FF3FA200F448FA /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6251AB21FF3FA200F448FA /* thumbnail@2x.png */; };
+		0E6251AE21FF3FA200F448FA /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6251AC21FF3FA200F448FA /* thumbnail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,8 @@
 		0E62518621FB47D500F448FA /* RainDropsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RainDropsView.h; sourceTree = "<group>"; };
 		0E62518821FB47D500F448FA /* RainDropsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainDropsView.m; sourceTree = "<group>"; };
 		0E62518A21FB47D500F448FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6251AB21FF3FA200F448FA /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		0E6251AC21FF3FA200F448FA /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		0E62518521FB47D500F448FA /* RainDrops */ = {
 			isa = PBXGroup;
 			children = (
+				0E6251AC21FF3FA200F448FA /* thumbnail.png */,
+				0E6251AB21FF3FA200F448FA /* thumbnail@2x.png */,
 				0E62518621FB47D500F448FA /* RainDropsView.h */,
 				0E62518821FB47D500F448FA /* RainDropsView.m */,
 				0E62518A21FB47D500F448FA /* Info.plist */,
@@ -123,6 +129,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6251AE21FF3FA200F448FA /* thumbnail.png in Resources */,
+				0E6251AD21FF3FA200F448FA /* thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
